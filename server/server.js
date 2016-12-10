@@ -4,6 +4,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var port = process.env.PORT || 8000;
 var app = express();
+var moment = require('moment');
 
 // configure database
 var morgan = require('morgan');
@@ -121,6 +122,8 @@ exports.spam = function() {
     users.forEach(user => {
       twilio.periodicGoalPoll(user.phoneNumber, user.goal);
       var daysSinceGoalCreation = Math.round((Date.now() - user[0].goalStartDate) / (24 * 60 * 60 * 1000)); // sets index
+      // var day =  moment(Date.now()).format();
+      // console.log('day formatting test', day);
       user.responses[daysSinceGoalCreation] = [Date.now(), 'fail.']; // made changes to response array
     });
     // celebrate completion
@@ -128,8 +131,9 @@ exports.spam = function() {
   });
 };
 
+// console.log("this is a test of formatting", moment(1481329283204).format());
+console.log("this is a test of ", moment(Date.now()).format());
 
-//1 is yes, 2 is no
 
 
 /*======================================

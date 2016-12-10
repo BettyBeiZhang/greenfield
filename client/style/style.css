@@ -76,12 +76,21 @@ box-shadow: none;
     bottom: -20px;
     border: 12px solid;
     border-color: lightgrey transparent transparent lightgrey;
+
 }
+
+
+.arrow-top {
+  float: right;
+  left: 5px;
+}    
+
 
 .round {
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
+
 }
 
 .talktext {
