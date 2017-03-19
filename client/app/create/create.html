@@ -1,55 +1,56 @@
-<h1>Add a goal, you worthless piece of shit...</h1>
+<h1 class ="heading1-on-create">Add a goal, you worthless piece of shit...</h1>
 <br />
 
 <div class="row">
   <div class="col-xs-12 col-sm-6 col-md-8">
 
-    <h3>your info</h3>
+    <h3>your info <small>(required)</small></h3>
     <hr />
     <form name="goalForm" ng-submit="addUser()" novalidate>
 
       <!--  GOAL -->
       <div class="form-group row">
-        <label for="example-text-input" class="col-xs-4 col-form-label">What do you want to accomplish?</label>
+        <label for="example-text-input" class="col-xs-4 col-form-label">* What do you want to accomplish?</label>
         <div class="col-xs-8">
           <input ng-model="user.goal" class="form-control" type="text" placeholder="Get off your ass!" id="example-text-input" required>
         </div>
       </div>
 
-      <!-- PHONE NUMBER -->
+        <!-- PHONE NUMBER -->
       <div class="form-group row">
-        <label for="example-tel-input" class="col-xs-4 col-form-label">Your cellphone</label>
+      <label for="example-tel-input" class="col-xs-4 col-form-label">* Your cellphone</label>
         <div class="col-xs-8">
-          <input ng-model="user.phoneNumber" class="form-control" type="tel" pattern="^(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$" placeholder="(555)-555-5555" id="example-tel-input" required>
+          <input ng-model="user.phoneNumber" class="form-control" phone-input type="text"  placeholder="(555)-555-5555" pattern="^(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$" id="example-tel-input" required>
         </div>
       </div>
       <br />
 
-
+  
 
       <h3>add a buddy to keep you in line</h3>
       <hr />
 
       <!-- BUDDY NAME -->
       <div class="form-group row">
-        <label for="example-text-input" class="col-xs-4 col-form-label">Buddy's name</label>
+        <label for="example-text-input" class="col-xs-4 col-form-label">  Buddy's name</label>
         <div class="col-xs-8">
-          <input ng-model="user.buddyName" class="form-control" type="text" placeholder="Dont eat anything with dirty carbs" id="example-text-input" required>
+          <input ng-model="user.buddyName" class="form-control" type="text" placeholder="Don't make us call your mother..." id="example-text-input">
         </div>
       </div>
 
       <!-- BUDDY PHONE -->
       <div class="form-group row">
-        <label for="example-tel-input" class="col-xs-4 col-form-label">Buddy's cellphone</label>
+        <label for="example-tel-input" class="col-xs-4 col-form-label">  Buddy's cellphone</label>
         <div class="col-xs-8">
-          <input ng-model="user.buddyPhone" class="form-control" type="tel" pattern="^(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$" placeholder="(555)-555-5555" id="example-tel-input" required>
+          <input ng-model="user.buddyPhone" class="form-control" phone-input type="text" pattern="^(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$" placeholder="(555)-555-5555" id="example-tel-input">
         </div>
       </div>
 
       <!-- TOS ACCEPT -->
       <div class="form-check">
+        <label class="form-check-label">*
         <input ng-model="user.acceptsTerms" class="form-check-input" type="checkbox" required />
-        <label class="form-check-label"><small> I agree to the weird terms, accept text messaging charges </small></label>
+        <small> I agree to the weird terms, accept text messaging charges, and generally sign away all rights </small></label>
       </div>
       <br />
 
@@ -58,17 +59,12 @@
 
     </form>
   </div>
-  <!-- <div class="col-xs-6 col-md-4">
-    <div class="image-column w-col w-col-6 w-col-medium-6"><img class="iphone-image" sizes="(max-width: 479px) 167px, (max-width: 767px) 190px, 335px" src="assets/phone_image.png" srcset="assets/phone_image.png 500w, assets/phone_image.png 670w" width="335"></div>
-  </div> -->
-    <div class=" right-in:after left-in arrow-top">(This is the Text you will receive)</div>
   <div class="col-xs-6 col-md-4" ng-model="user.goal">
-    <div class="image-column w-col w-col-6 w-col-medium-6 phone-container"><img class="iphone-image" sizes="(max-width: 479px) 167px, (max-width: 767px) 190px, 335px" src="assets/phone_image.png" srcset="assets/phone_image.png 500w, assets/phone_image.png 670w" width="335">
-  <div class="talk-bubble tri-right round right-in">
-  <div class="talktext">How did you do on your goal of:  # {{user.goal}} #<br><br> Reply 1 for 'yes'/ 2 for 'no'</div> 
+    <div class="image-column w-col w-col-6 w-col-medium-6 phone-container"><img class="iphone-image" sizes="(max-width: 479px) 167px, (max-width: 767px) 190px, 335px" src="assets/phone_image_create.png" srcset="assets/phone_image_create.png 500w, assets/phone_image_create.png 670w" width="335">
 
-  </div>
-    </div>
+      <div class="talk-bubble tri-right round right-in">
+        <div class="talktext">How did you do on your goal of: # {{user.goal}} #<br><br> Reply 1 for 'yes'/ 2 for 'no'</div>
+      </div>
   </div>
 
 </div>

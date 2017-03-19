@@ -1,6 +1,7 @@
 angular.module('app', [
 	'app.service',
-	'app.goal',
+	'app.create',
+    'app.finish',
 	'app.status',
 	'ngRoute'
 	])
@@ -8,7 +9,8 @@ angular.module('app', [
 .config(function($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl:"app/login.html"
+		controller: function() { window.location.replace('/'); },
+    template: '<div></div>'
 	})
 	.when('/create', {
 		templateUrl:"app/create/create.html",
@@ -18,6 +20,10 @@ angular.module('app', [
 		templateUrl:"app/status/status.html",
 		controller:"statusController"
 	})
+  .when('/finish', {
+    templateUrl:"app/finish/finish.html",
+    controller:"finishController"
+  })
 	.otherwise({
 		redirectTo: '/'
 	});
