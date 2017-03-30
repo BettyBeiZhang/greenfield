@@ -1,26 +1,9 @@
-# Project Name
+Get Hassled - A Goal Tracker that daily checkin on your progress to track your goal. 
 
-> Pithy project description
+Greenfield project 
 
-## Team
+Team Member: Collin Tharp, Abiy Melaku and Bartek Ringwelski
 
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
-
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-    1. [Installing Dependencies](#installing-dependencies)
-    1. [Tasks](#tasks)
-1. [Team](#team)
-1. [Contributing](#contributing)
-
-## Usage
-
-> Some usage instructions
 
 ## Requirements
 

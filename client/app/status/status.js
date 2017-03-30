@@ -8,15 +8,7 @@ angular.module("app.status", [])
   }
 
   $http.get('/user')
-<<<<<<< HEAD
     .success(function(user) {
-    	$scope.user = user;
-    	$scope.user.responses = $scope.user.responses.map(function(item){
-    		return [moment(item[0]).format(), item[1]];
-    	});
-    });
-=======
-    .success((user) => {
       if (!user) {
         $location.path('/');
       }
@@ -50,6 +42,6 @@ angular.module("app.status", [])
       }
     })
     .error((err) => console.error(err));
->>>>>>> c5f3e63e9babf913edc6adae336d2c1848b5c85c
+
 
 });
